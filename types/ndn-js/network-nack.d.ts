@@ -9,6 +9,9 @@ export namespace NetworkNack {
 }
 
 export class NetworkNack {
-    getOtherReasonCode(): number;
+    constructor();
     getReason(): NetworkNack.Reason;
+    getOtherReasonCode(): number;
+    setReason(reason: NetworkNack.Reason): NetworkNack;
+    setOtherReasonCode(otherReasonCode: number): NetworkNack;
 }

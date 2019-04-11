@@ -24,6 +24,7 @@ face.expressInterest(new ndn.Name("/A"),
 
 n = ndn.Face.getMaxNdnPacketSize();
 face.putData(new ndn.Data());
+face.putNack(new ndn.Interest(), new ndn.NetworkNack());
 
 n = face.registerPrefix(new ndn.Name("/A"),
     (prefix: ndn.Name, interest: ndn.Interest) => {},

@@ -32,6 +32,7 @@ export class Face {
 
     static getMaxNdnPacketSize(): number;
     putData(data: Data): void;
+    putNack(interest: Interest, nack: NetworkNack): void;
 
     registerPrefix(prefix: Name,
                    onInterest: OnInterestCallback,
